@@ -2,7 +2,6 @@
 
 ## Course syllabus for Introduction to Back-End Development
 
-
 This course is the first of a series that aims to help you learn more about web development. Back-end developers must have a proficient understanding of the needs of front-end technologies, so through this first course, you will gain an understanding of the inner workings of the internet and webservers, as well as HTML, CSS and Javascript. You will then use this knowledge to create your own biographical page that harnesses the power of the Bootstrap CSS framework. By the end of this course, you’ll be able to:    
 
 - Describe the back-end developer role
@@ -373,3 +372,288 @@ All data sent over SSH is encrypted. This means that third parties cannot unders
 
 ### Secure File Transfer Protocol (SFTP)
 The data is transmitted insecurely when using the File Transfer Protocol. This means that third parties may understand the data that you are sending. This is not right if you transmit company files such as software and databases. To solve this, the SSH File Transfer Protocol, alternatively called the Secure File Transfer Protocol, can be used to transfer files over the SSH protocol. This ensures that the data is transmitted securely. Most FTP clients also support the SFTP protocol.
+
+
+
+## Setting up your local development environment
+
+
+This reading walks you through the steps to set up an Integrated Development Environment, or IDE, on a Windows and on a Mac (further down below).
+
+The IDE you'll be using in the course is Visual Studio Code, which Microsoft provides for free and comes with a wealth of plugins and extensions to make your life as a developer easier.
+
+You have two options for using Visual Studio Code to complete your course activities:
+
+### Option 1: Use Visual Studio Code in-browser with Coursera Labs
+
+Coursera’s platform offers an in-browser version of Visual Studio Code which is preconfigured and requires no local setup. You can access the Visual Studio Code environment through the “Lab” items included in this course. Your work and files will be saved and available within this in-browser lab while you have course access.
+
+### Option 2: Work on your local device
+
+You can also choose to complete your work on your local machine if you prefer. This will require a few steps of set up in advance. 
+
+First, you need to download the IDE from Microsoft's website - 
+https://code.visualstudio.com/download
+
+Select the download based on your operating system.
+
+### Windows
+
+* **Step 1**: Download the Windows installer.
+
+* **Step 2**: Open the file to install it once the download is complete.
+
+* **Step 3**: Review and accept the license agreement, then click Next.
+
+* **Step 4**: Keep the default value when prompted for the destination location and click next.
+
+* **Step 5**: On the additional tasks view, make sure that Add to PATH is selected. 
+
+* **Step 6**: Click next.
+
+* **Step 7**: Click install when the ready to install page appears.
+
+* **Step 8**: Click finish once completed, and the application will launch.
+
+
+### Mac
+
+* **Step 1**: Download the application based on the chipset you have. M1 macs use Apple Silicon, and older Macs use Intel. If you are not sure, choose the Universal option.
+
+* **Step 2**: Go to your Downloads folder once the download is complete. 
+
+* **Step 3**: Double-click the zip file to extract the contents.
+
+* **Step 4**: Drag and drop the .app file to the application link in Finder below.
+
+* **Step 5**: Open the app.
+
+### Linux
+
+* Please refer to the [official Linux installation guide](https://code.visualstudio.com/docs/setup/linux) for Visual Studio Code.
+
+### Selecting a working directory
+
+Now that you have Visual Studio Code set up create a folder on your device that you'll use to do course exercises.
+
+Open Visual Studio Code, go to File and select Open Folder. Using the file browser, select the folder you just created.
+
+Congratulations, you're set up now to begin writing some code.
+
+## Additional Resources
+
+### Learn more
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+### HTTP Overview (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+### Introduction to Networking by Dr.Charles R Severance
+https://www.amazon.com/Introduction-Networking-How-Internet-Works/dp/1511654945/
+
+### Chrome Developer Tools Overview (Google)
+https://developer.chrome.com/docs/devtools/overview/
+
+### Firefox Developer Tools User Docs  (Mozilla)
+https://firefox-source-docs.mozilla.org/devtools-user/index.html
+
+### Getting Started with Visual Studio Code  (Microsoft)
+https://code.visualstudio.com/docs
+
+
+
+
+
+
+# Introduction to HTML and CSS
+
+## Simple HTML tags
+
+There are many tags available in HTML. Here you will learn about common tags that you'll use as a developer.
+
+
+### Headings
+Headings allow you to display titles and subtitles on your webpage.
+
+```html
+<body>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</body>
+```
+
+
+### Paragraphs
+Paragraphs contain text content.
+
+```html
+<p>
+   This paragraph
+   contains a lot of lines
+   but they are ignored.
+</p>
+```
+**Note**: that putting content on a new line is ignored by the web browser.
+
+
+### Line Breaks
+As you've learned, line breaks in the paragraph tag line are ignored by HTML. Instead, they must be specified using the <br> tag. The <br> tag does not need a closing tag.
+
+```html
+<p>
+   This paragraph<br>
+   contains a lot of lines<br>
+   and they are displayed.
+</p>
+```
+
+
+### Strong
+Strong tags can be used to indicate that a range of text has importance. 
+
+The difference between the  ```<strong>``` tag and  ```<b>``` (bold) tag in HTML lies primarily in their semantic meaning and intended use rather than their visual representation. Here is a detailed comparison:  
+
+```html
+<p>
+   No matter how much the dog barks: <strong>don't feed him chocolate</strong>.
+</p>
+```
+
+
+### Bold
+Bold tags can be used to draw the reader's attention to a range of text.
+
+```html
+<p>
+   The primary colors are <b>red</b>, <b>yellow</b> and <b>blue</b>.
+</p>
+
+<p>
+   In case of emergency, <b>push the red button</b>.
+</p>
+```
+
+Bold tags should be used to draw attention but not to indicate that something is more important. Consider the following example:
+
+```html
+The three core technologies of the Internet are <b>HTML</b>, <b>CSS</b> and <b>Javascript</b>.
+```
+
+
+### Emphasis
+Emphasis tags can be used to add emphasis to text.
+
+```html
+<p>
+   Wake up <em>now</em>!
+</p>
+```
+
+
+### Italics
+Italics tags can be used to offset a range of text.
+
+```html
+<p>
+   The term <i>HTML</i> stands for HyperText Markup Language.
+</p>
+```
+
+
+### Emphasis vs. Italics
+
+The difference between the ```<em>``` (emphasis) tag and the ```<i>``` (italics) tag in HTML lies in their semantic meaning and intended use rather than their default appearance.   By default both tags will have the same visual effect in the web browser, however the difference is in the meaning.
+
+Emphasis tags stress the text contained in them. Let's explore the following example:
+
+```html
+I <em>really</em> want ice cream.
+```
+
+Italics represent off-set text and should be used for technical terms, titles, a thought or a phrase from another language, for example:
+
+```html
+My favourite book is <i>Dracula</i>.
+```
+
+Screen readers will not announce any difference if an italics tag is used.
+
+
+### Lists
+You can add lists to your web pages. There are two types of lists in HTML.
+
+Lists can be unordered using the ```<ul>``` tag. List items are specified using the ```<li>``` tag, for example:
+
+```html
+<ul>
+   <li>Tea</li>
+   <li>Sugar</li>
+   <li>Milk</li>
+</ul>
+```
+
+Lists can also be ordered using the ```<ol>``` tag. Again, list items are specified using the ```<li>``` tag.
+
+```html
+<ol>
+   <li>Rocky</li>
+   <li>Rocky II</li>
+   <li>Rocky III</li>
+</ol>
+```
+
+
+### Div tags
+A ```<div>``` tag defines a content division in a HTML document. It acts as a generic container and has no effect on the content unless it is styled by CSS.
+
+The following example shows a ```<div>``` element that contains a paragraph element:
+
+```html
+<div>
+   <p>This is a paragraph inside a div</p>
+</div>
+```
+
+It can be nested inside other elements, for example:
+
+```html
+<div>
+   <div>
+      <p>This is a paragraph inside a div that’s inside another div</p>
+   </div>
+</div>
+```
+
+As mentioned, the div has no impact on content unless it is styled by CSS. Let’s add a small CSS rule that styles all divs on the page.
+
+Don't worry about the meaning of the CSS just yet, you'll explore CSS further in a later lesson. In summary, you're applying a rule that adds a border and some visual spacing to the element.
+
+```html
+<style>
+   div {
+      border: 1px solid black;
+      padding: 2px;
+   }
+</style>
+<div>
+   <div>
+      <p>This is a paragraph inside stylized divs</p>
+   </div>
+```
+
+Div elements are an important part of building webpages. More advanced usage of div elements will be explored in another course.
+
+
+### Comments
+If you want to leave a comment in the code for other developers, it can be added as:
+
+```html
+<!-- This is a comment --> 
+```
+
+The comment will not be displayed in the web browser.
+
