@@ -657,3 +657,185 @@ If you want to leave a comment in the code for other developers, it can be added
 
 The comment will not be displayed in the web browser.
 
+## Additional Resources
+
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+### HTML Elements Reference (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+### The Form Element (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+
+### What is the Document Object Model? (W3C)
+https://www.w3.org/TR/WD-DOM/introduction.html
+
+### ARIA in HTML (W3C via Github)
+https://w3c.github.io/html-aria/
+
+### ARIA Authoring Practices  (W3C)
+https://www.w3.org/TR/wai-aria-practices-1.2/
+
+
+## Different types of selectors
+
+When styling a web page, there are many types of selectors available that allow developers to be as broad or as specific as they need to be when selecting HTML elements to apply CSS rules to.
+
+Here you will learn about some of the common CSS selectors that you will use as a developer.
+
+### Element Selectors
+The element selector allows developers to select HTML elements based on their element type.
+
+For example, if you use p as the selector, the rule will apply to all p elements on the webpage.
+
+#### HTML
+
+```html
+<p>Once upon a time...</p>
+<p>In a hidden land...</p>
+```
+
+#### CSS
+
+```html
+p { 
+  color: blue; 
+}
+```
+
+### ID Selectors
+
+The ID selector uses the id attribute of an HTML element. Since the id is unique within a webpage, it allows the developer to select a specific element for styling. ID selectors are prefixed with a # character.
+
+#### HTML
+
+```html
+<span id="latest">New!</span>
+```
+
+#### CSS
+```html
+#latest { 
+  background-color: purple; 
+}
+```
+
+### Class Selectors
+Elements can also be selected based on the class attribute applied to them. The CSS rule has been applied to all elements with the specified class name. The class selector is prefixed with a . character.
+
+In the following example, the CSS rule applies to both elements as they have the navigation CSS class applied to them.
+
+#### HTML
+```html
+<a class="navigation">Go Back</a>
+<p class="navigation">Go Forward</p>
+```
+#### CSS
+```html
+.navigation { 
+  margin: 2px;
+}
+```
+
+### Element with Class Selector
+A more specific method for selecting HTML elements is by first selecting the HTML element, then selecting the CSS class or ID.
+
+The example below selects all p elements that have the CSS class introduction applied to them.
+
+#### HTML
+```html
+<p class="introduction"></p>
+```
+
+#### CSS
+```html
+p.introduction { 
+  margin: 2px;
+}
+```
+
+### Descendant Selectors
+Descendant selectors are useful if you need to select HTML elements that are contained within another selector.
+
+Let's explore an example.
+
+You have the following HTML structure and CSS rule.
+
+#### HTML
+
+```html
+<div id="blog">
+  <h1>Latest News</h1>
+  <div>
+    <h1>Today's Weather</h1>
+    <p>The weather will be sunny</p>
+  </div>
+  <p>Subscribe for more news</p>
+</div>
+<div>
+  <h1>Archives</h1>
+</div>
+```
+
+#### CSS
+```html
+#blog h1 {
+  color: blue;
+}
+```
+The CSS rule will select all h1 elements that are contained within the element with the ID blog. The CSS rule will not apply to the h1 element containing the text Archives.
+
+The structure of a descendant selector is a CSS selector, followed by a single space character, followed by another CSS selector.
+
+Multiple descendants can also be selected. For example, to select all h1 elements that are descendants of div elements which are descendants of the blog element, the selector is specified as follows.
+
+#### CSS
+```html
+#blog div h1 {
+  color: blue;
+}
+```
+
+### Child Selectors
+Child selectors are more specific than descendant selectors. They only select elements that are immediate descendants (children) of a selector (the parent).
+
+For example, you have the following HTML structure:
+
+#### HTML
+```html
+<div id="blog">
+  <h1>Latest News</h1>
+  <div>
+    <h1>Today's Weather</h1>
+    <p>The weather will be sunny</p>
+  </div>
+  <p>Subscribe for more news</p>
+</div>
+```
+
+If you wanted to style the h1 element containing the text Latest News, you can use the following child selector:
+
+#### CSS
+``
+#blog > h1 {
+  color: blue;
+}
+This will select the element with the ID blog (the parent), then it will select all h1 elements that are contained directly in that element (the children). The structure of the child selector is a CSS selector followed by the child combinator symbol > followed by another CSS selector.
+
+Note that this will not go beyond a single depth level. Therefore, the CSS rule will not be applied to the h1 element containing the text Today's Weather.
+
+:hover Pseudo-Class
+A special keyword called a pseudo-class allows developers to select elements based on their state. Don't worry too much about what that means right now. For now, let's look at how the hover pseudo-class allows you to style an element when the mouse cursor hovers over the element.
+
+The simplest example of this is changing the color of a hyperlink when it is hovered over. To do this, you add the :hover pseudo-class to the end of the selector. In the following example, adding :hover  to the a element will change the color of the hyperlink to orange when it is hovered over.
+
+CSS
+
+123
+a:hover {
+  color: orange;
+}
+This pseudo-class is very useful for creating visual effects based on user interaction.
+
+Other Selectors
+There are many other CSS selectors available to style your webpage. 
